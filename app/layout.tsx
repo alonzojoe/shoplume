@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "@/assets/styles/globals.css";
+import { APP_NAME, APP_DESCRIPTION } from "@/lib/constants";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,8 +10,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Shoplume",
-  description: "An e-commerce platform built with Next.js",
+  title: {
+    template: "%s | Shoplume",
+    default: APP_NAME,
+  },
+  description: APP_DESCRIPTION,
 };
 
 export default function RootLayout({

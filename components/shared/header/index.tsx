@@ -33,7 +33,8 @@ const Header = () => {
           </Button>
           <Button asChild>
             <Link href="/sign-in">
-              <UserIcon /> Sign In
+              {/* <UserIcon />  */}
+              Sign In
             </Link>
           </Button>
         </div>

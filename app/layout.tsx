@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "@/assets/styles/globals.css";
-import { APP_NAME, APP_DESCRIPTION } from "@/lib/constants";
+import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from "@/lib/constants";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     default: APP_NAME,
   },
   description: APP_DESCRIPTION,
+  metadataBase: new URL(SERVER_URL),
 };
 
 export default function RootLayout({

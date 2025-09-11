@@ -14,8 +14,12 @@ const HomePage = async () => {
   console.log(sampleData);
   return (
     <div>
-      <h2 className="text-re">Shopelumess</h2>
-      <ProductList data={sampleData.products} title="Products" />
+      <h2>Shopelumess</h2>
+      <ProductList
+        data={sampleData.products}
+        title="Newst Arrivals"
+        limit={4}
+      />
     </div>
   );
 };

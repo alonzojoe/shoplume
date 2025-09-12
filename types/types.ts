@@ -9,6 +9,6 @@ export type Product = {
     rating: number;
     numReviews: number;
     stock: number;
-    isFeatured: boolean;
+    isFeature: boolean;
     banner: string | null;
 }

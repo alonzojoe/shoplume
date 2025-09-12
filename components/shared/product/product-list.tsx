@@ -14,7 +14,7 @@ const ProductList = ({ data, title, limit }: ProductListProps) => {
     <div className="my-10">
       <h2 className="h2-bold mb-5">{title}</h2>
       {limitedData.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {limitedData.map((product: Product, index: number) => (
             <ProductCard key={`${product.name}-${index}`} product={product} />
           ))}

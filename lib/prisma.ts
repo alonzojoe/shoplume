@@ -1,5 +1,4 @@
-import { PrismaClient } from '@/lib/generated/prisma';
-
+import { PrismaClient } from "@prisma/client"
 const globalForPrisma = globalThis as unknown as {
     prisma: PrismaClient | undefined
 }
@@ -11,6 +10,7 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
 // import { PrismaNeon } from '@prisma/adapter-neon';
 // import { PrismaClient } from '@prisma/client';
 // import ws from 'ws';
+
 
 // // Sets up WebSocket connections, which enables Neon to use WebSocket communication.
 // neonConfig.webSocketConstructor = ws;
